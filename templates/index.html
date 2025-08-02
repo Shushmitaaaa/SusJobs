@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Job Detector - AI-Powered Job Verification</title>
+  <meta name="description" content="Detect fake job postings with advanced AI analysis. Protect yourself from fraudulent job opportunities with our intelligent detection system.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="glass-card">
+      <header class="card-header">
+        <h1 class="gradient-text">SusJobs - Fake Job Detector</h1>
+        <p class="subtitle">Analyze job descriptions with AI-powered detection</p>
+      </header>
+      
+      <main class="card-content">
+        <div class="input-section">
+          <label class="input-label">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+            Job Description
+          </label>
+          <textarea 
+            id="jobInput" 
+            class="glass-input" 
+            placeholder="Paste the job description here to analyze for potential fraud indicators..."
+            rows="8"
+          ></textarea>
+        </div>
+
+        
+        <div class="button-group">
+            <button id="checkBtn" class="glass-button primary-btn" onclick="submitJob()">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Check Job</span>
+            </button>
+
+            <button id="resetBtn" class="glass-button secondary-btn" onclick="resetForm()">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4v5h.582M20 20v-5h-.581M4 20L20 4"></path>
+              </svg>
+              <span>Try Another Job</span>
+            </button>
+        </div>
+
+
+        
+        <div id="result" class="result-card" style="display: none;">
+          <div class="result-content">
+            <div class="status-dot"></div>
+            <div class="result-text">
+              <h3>Detection Result</h3>
+              <p id="resultText"></p>
+            </div>
+          </div>
+        </div>
+
+        
+        <button id="explainBtn" class="glass-button secondary-btn" onclick="getReasoning()" style="display: none;">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Explain Why</span>
+        </button>
+
+        
+        <div id="reasoning" class="reasoning-card" style="display: none;">
+          <div class="reasoning-content">
+            <div class="status-dot accent"></div>
+            <div class="reasoning-text">
+              <h3>AI Analysis</h3>
+              <div class="reasoning-box">
+                <p id="reasoningText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
