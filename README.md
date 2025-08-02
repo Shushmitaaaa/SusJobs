@@ -17,7 +17,7 @@
 
 ### Dataset Collection
 
-* Dataset used: [Fake Job Postings Dataset (Kaggle)](https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction)
+* Used dataset from kaggle.
 * Contains job descriptions labeled as fake or real.
 
 ### Data Cleaning
