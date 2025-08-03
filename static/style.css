@@ -6,7 +6,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, hsl(220 30% 8%), hsl(210 40% 12%), hsl(200 50% 15%));
+  /* background: linear-gradient(135deg, hsl(220 30% 8%), hsl(210 40% 12%), hsl(200 50% 15%));  */
+  /* background: #18181E; */
+  /* background: linear-gradient(145deg, #0e0e11, #1a1a22); */
+  background: linear-gradient(to right, #1b1b23, #121217);
   min-height: 100vh;
   background-attachment: fixed;
   color: hsl(220 15% 95%);
@@ -22,9 +25,10 @@ body {
 }
 
 
-.glass-card {
-  background: hsla(220 25% 10% / 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
+ .glass-card {
+  /* background: hsla(220 25% 10% / 0.1); */
+  /* backdrop-filter: blur(20px) saturate(180%); */
+  /* background:#121217;
   border: 1px solid hsla(220 30% 25% / 0.2);
   box-shadow: 
     0 8px 32px hsla(220 25% 5% / 0.3),
@@ -33,10 +37,23 @@ body {
   padding: 40px;
   width: 100%;
   max-width: 900px;
+  position: relative; */
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(18px) saturate(150%); 
+  -webkit-backdrop-filter: blur(18px) saturate(150%); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
   position: relative;
-}
+  transition: border 0.3s ease, box-shadow 0.3s ease; 
 
-.glass-card::before {
+  
+} 
+
+ /* .glass-card::before {
   content: '';
   position: absolute;
   top: -2px;
@@ -46,13 +63,13 @@ body {
   background: radial-gradient(circle at 50% 50%, hsl(200 80% 60% / 0.1), transparent);
   border-radius: inherit;
   z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+  opacity: 0; */
+  /* transition: opacity 0.3s ease; */
 
-.glass-card:hover::before {
+
+ .glass-card:hover::before {
   opacity: 1;
-}
+} 
 
 
 .card-header {
@@ -61,7 +78,11 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, hsl(200 90% 80%), hsl(180 80% 75%), hsl(220 70% 85%));
+  /* background: linear-gradient(135deg, hsl(200 90% 80%), hsl(180 80% 75%), hsl(220 70% 85%)); */
+  /* background: #ff4d79; */
+  /* background: #fc5c7d; */
+  /* background:linear-gradient(to right,#fc5c7d,#6a82fb); */
+  background: linear-gradient(to right,#ff2a6d, #ffc1d3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,7 +123,8 @@ body {
   gap: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: hsl(180 80% 55%);
+  /* color: hsl(180 80% 55%); */
+  color: #ff4d79;
 }
 
 .icon {
@@ -131,8 +153,10 @@ body {
 }
 
 .glass-input:focus {
-  border-color: hsl(200 90% 60% / 0.5);
-  box-shadow: 0 0 0 2px hsl(200 90% 60% / 0.2);
+  /* border-color: hsl(200 90% 60% / 0.5);
+  box-shadow: 0 0 0 2px hsl(200 90% 60% / 0.2); */
+  border-color: #ff4d79;
+  box-shadow: 0 0 0 2px #ff4d7980;
 }
 
 .button-group {
@@ -145,7 +169,12 @@ body {
 
 
 .glass-button {
-  background: linear-gradient(45deg, hsl(200 70% 50% / 0.1), hsl(180 60% 55% / 0.1));
+  /* background: linear-gradient(45deg, hsl(200 70% 50% / 0.1), hsl(180 60% 55% / 0.1)); */
+  /* background: linear-gradient(to right,#ff4d79,#ff6ec4,#ffa26b); */
+  /* background:linear-gradient(to right,#fc5c7d,#6a82fb); */
+  /* background: linear-gradient(to right,#ff5f6d,#ffc371); */
+  /* background: #ff4d79; */
+  background: #ff2a6d;
   backdrop-filter: blur(10px);
   border: 1px solid hsla(220 20% 20% / 0.3);
   border-radius: 16px;
@@ -165,12 +194,19 @@ body {
   font-family: inherit;
 }
 
-.glass-button:hover {
-  background: hsla(200 90% 60% / 0.1);
+ .glass-button:hover { 
+  /* background: hsla(200 90% 60% / 0.1);
   border-color: hsla(200 90% 60% / 0.3);
   box-shadow: 0 0 20px hsla(200 90% 60% / 0.2);
-  transform: translateY(-1px);
-}
+  transform: translateY(-1px);  
+  /* background: hsla(345, 100%, 66%, 0.1);     
+  border-color: hsla(345, 100%, 66%, 0.3);   
+  box-shadow: 0 0 20px hsla(345, 100%, 66%, 0.2);  
+  transform: translateY(-1px); */
+  background: #ff2a63; /* slightly deeper pink */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 4px 10px rgba(255, 77, 121, 0.25); 
+} 
 
 .glass-button:active {
   transform: translateY(0);
@@ -184,11 +220,19 @@ body {
 .secondary-btn {
   padding: 16px;
   font-size: 16px;
-  border-color: hsla(200 90% 60% / 0.3);
+  /* border-color: hsla(200 90% 60% / 0.3); */
+  
 }
 
 .secondary-btn:hover {
-  border-color: hsla(200 90% 60% / 0.5);
+  /* border-color: hsla(200 90% 60% / 0.5); */
+  /* background: hsla(345, 100%, 66%, 0.1);     */
+  /* border-color: hsla(345, 100%, 66%, 0.3);    */
+  /* box-shadow: 0 0 20px hsla(345, 100%, 66%, 0.2);   */
+  /* transform: translateY(-1px); */
+  background: #ff2a63; /* slightly deeper pink */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 4px 10px rgba(255, 77, 121, 0.25);
 }
 
 
@@ -229,7 +273,8 @@ body {
 }
 
 .reasoning-card {
-  border-color: hsla(180 80% 55% / 0.2);
+  /* border-color: hsla(180 80% 55% / 0.2); */
+  border-color: #ff4d79;
 }
 
 .result-content, .reasoning-content {
@@ -242,14 +287,14 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: hsl(200 90% 60%);
+  background:#ff4d79;
   margin-top: 8px;
   animation: pulse 2s ease infinite;
   flex-shrink: 0;
 }
 
 .status-dot.accent {
-  background: hsl(180 80% 55%);
+  background:#ff4d79;
 }
 
 @keyframes pulse {
@@ -261,11 +306,13 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: hsl(200 90% 60%);
+  /* color: hsl(200 90% 60%); */
+  color: #ff4d79;
+
 }
 
 .reasoning-text h3 {
-  color: hsl(180 80% 55%);
+  color: #ff4d79;
 }
 
 .result-text p, .reasoning-text p {
@@ -281,7 +328,7 @@ body {
   max-height: 400px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: hsl(180 80% 55% / 0.3) transparent;
+  scrollbar-color: #ff4d79; 
 }
 
 .reasoning-box::-webkit-scrollbar {
@@ -292,14 +339,14 @@ body {
   background: transparent;
 }
 
-.reasoning-box::-webkit-scrollbar-thumb {
+/* .reasoning-box::-webkit-scrollbar-thumb {
   background: hsl(180 80% 55% / 0.3);
   border-radius: 3px;
-}
+} */
 
-.reasoning-box::-webkit-scrollbar-thumb:hover {
+/* .reasoning-box::-webkit-scrollbar-thumb:hover {
   background: hsl(180 80% 55% / 0.5);
-}
+} */
 
 
 @media (max-width: 768px) {
