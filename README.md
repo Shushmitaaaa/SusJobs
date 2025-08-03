@@ -7,9 +7,10 @@
 
 ## Screenshots
 
-<img width="1600" height="755" alt="sus" src="https://github.com/user-attachments/assets/945882ca-c897-4364-b231-96ba2694f1e5" />
-<img width="1594" height="753" alt="sus1" src="https://github.com/user-attachments/assets/4079b58b-6bb3-4bba-a0dd-fb450d93445b" />
-<img width="1596" height="764" alt="suss2" src="https://github.com/user-attachments/assets/53d37acf-d8d0-4f87-aaf7-d7e9049a1c89" />
+
+<img width="1600" height="762" alt="1a" src="https://github.com/user-attachments/assets/020d325d-8f06-4610-8613-19729004907b" />
+<img width="1585" height="766" alt="2ab" src="https://github.com/user-attachments/assets/e3d45962-e802-4a8e-8c27-6482c470a7a6" />
+<img width="1583" height="761" alt="3ab" src="https://github.com/user-attachments/assets/8e968857-576c-44c0-897c-a6e4b6b2aab9" />
 
 
 
