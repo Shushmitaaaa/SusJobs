@@ -22,7 +22,7 @@ models = genai.list_models()
 #     print(f"Model name: {m.name}, Supported generation: {'generateContent' in m.supported_generation_methods}")
 
 
-gemini_model = genai.GenerativeModel("gemini-2.5-flash-lite")  # NO "models/" prefix needed
+gemini_model = genai.GenerativeModel("gemini-2.5-flash")  
 
 
 def preprocess(text):
